@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA3ECEDC237C83990067DB4E /* PeriodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3ECEDB237C83990067DB4E /* PeriodViewController.swift */; };
 		E0A04504237B27600026D0AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A04503237B27600026D0AC /* AppDelegate.swift */; };
 		E0A04509237B27600026D0AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0A04507237B27600026D0AC /* Main.storyboard */; };
 		E0A0450B237B27650026D0AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0A0450A237B27650026D0AC /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA3ECEDB237C83990067DB4E /* PeriodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodViewController.swift; sourceTree = "<group>"; };
 		E0A04500237B27600026D0AC /* pickADriver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pickADriver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0A04503237B27600026D0AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0A04508237B27600026D0AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				E0A04503237B27600026D0AC /* AppDelegate.swift */,
 				E0A04531237B27910026D0AC /* NamesTableViewController.swift */,
 				E0A04507237B27600026D0AC /* Main.storyboard */,
+				BA3ECEDB237C83990067DB4E /* PeriodViewController.swift */,
 				E0A0450A237B27650026D0AC /* Assets.xcassets */,
 				E0A0450C237B27650026D0AC /* LaunchScreen.storyboard */,
 				E0A0450F237B27650026D0AC /* Info.plist */,
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA3ECEDC237C83990067DB4E /* PeriodViewController.swift in Sources */,
 				E0A04532237B27910026D0AC /* NamesTableViewController.swift in Sources */,
 				E0A04504237B27600026D0AC /* AppDelegate.swift in Sources */,
 			);
@@ -435,13 +439,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S9FWP6J782;
 				INFOPLIST_FILE = pickADriver/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = RileyHill.pickADriver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -453,13 +458,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S9FWP6J782;
 				INFOPLIST_FILE = pickADriver/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = RileyHill.pickADriver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

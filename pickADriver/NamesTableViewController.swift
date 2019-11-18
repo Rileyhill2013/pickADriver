@@ -10,11 +10,13 @@ import UIKit
 
 class NamesTableViewController: UITableViewController {
 
-    var names = ["Riley", "Mason", "Jaylin", "Josh", "Gerardo", "David", "Fitzer", "Kelvin"]
+  //  var names = ["Riley", "Mason", "Jaylin", "Josh", "Gerardo", "David", "Fitzer", "Kelvin"]
+    var period = String()
+    var names = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableView.isEditing = true
     }
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -26,7 +28,7 @@ class NamesTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = names[indexPath.row]
         return cell
     }
@@ -49,40 +51,58 @@ class NamesTableViewController: UITableViewController {
         present(alert, animated: true, completion: nil)
     }
     
-    /*
-    // Override to support conditional editing of the table view.
+    
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
+    
 
-    /*
-    // Override to support editing the table view.
+    
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
+             self.names.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
+    
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
+        let nameToMove =  names.remove(at: fromIndexPath.row)
+        names.insert(nameToMove, at: to.row)
 
     }
-    */
+   
 
-    /*
-    // Override to support conditional rearranging of the table view.
+   
     override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
     }
-    */
+    
+    func loadTestNames(){
+        switch period {
+        case "1st":
+            names = ["William","Theodore", "John"]
+        case "2nd":
+            names = ["Tu'laasti","Draco", "Lissa"]
+        case "3rd":
+            names = ["Angus","Alpur(t)", "Axel", "Aladr", "Leggias" ]
+        case "4th":
+            names = ["Varis", "Xanaya", "Snuz", "Evolac"]
+        case "5th":
+            names = ["Spongebob", "Patrick", "Squidward"]
+        case "6th":
+            names = ["A", "B", "C"]
+        case "7th":
+            names = ["Shrek","Donkey", "Fiona", "Gingy" ]
+        case "8th":
+            names = ["I ran out of ideas"]
+        default:
+            names = ["I really did"]
+        }
+        
+    }
+  
 
     /*
     // MARK: - Navigation
@@ -93,5 +113,6 @@ class NamesTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
 
 }
