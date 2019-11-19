@@ -12,10 +12,22 @@ class NamesTableViewController: UITableViewController {
 
   //  var names = ["Riley", "Mason", "Jaylin", "Josh", "Gerardo", "David", "Fitzer", "Kelvin"]
     var period = String()
-    var names = [String]()
-    
+    var names = [String]() {
+        didSet {
+            defaults.set(names, forKey: period)
+        }
+    }
+    let defaults = UserDefaults.standard
     override func viewDidLoad() {
+        defaults.removePersistentDomain(forName: Bundle.main.bundleIdentifier!)
+        defaults.synchronize()
         super.viewDidLoad()
+        if let savedData = defaults.object(forKey: period) as? [String] {
+            names = savedData
+        } else {
+            loadTestNames()
+        }
+        
         tableView.isEditing = true
     }
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -79,27 +91,28 @@ class NamesTableViewController: UITableViewController {
         return true
     }
     
-    func loadTestNames(){
+    func loadTestNames() {
         switch period {
-        case "1st":
-            names = ["William","Theodore", "John"]
-        case "2nd":
-            names = ["Tu'laasti","Draco", "Lissa"]
-        case "3rd":
-            names = ["Angus","Alpur(t)", "Axel", "Aladr", "Leggias" ]
-        case "4th":
-            names = ["Varis", "Xanaya", "Snuz", "Evolac"]
-        case "5th":
-            names = ["Spongebob", "Patrick", "Squidward"]
-        case "6th":
-            names = ["A", "B", "C"]
-        case "7th":
-            names = ["Shrek","Donkey", "Fiona", "Gingy" ]
-        case "8th":
-            names = ["I ran out of ideas"]
+        case "First Period":
+            names = ["Jaylin", "Mason", "Kelvin"]
+        case "Second Period":
+            names = ["Jaylin", "David", "Gerardo"]
+        case "Third Period":
+            names = ["Fitzer", "Mason", "Giorno"]
+        case "Fourth Period":
+            names = ["Craft", "Fitzer", "Trey"]
+        case "Fifth Period":
+            names = ["William", "Mason", "Joseph"]
+        case "Six Period":
+            names = ["Jaylin", "Jay", "Wood"]
+        case "Seventh Period":
+            names = ["Fitzer", "Derek", "Johnson"]
+        case "Eight Period":
+            names = ["Franz", "Abigail", "Kelvin"]
         default:
-            names = ["I really did"]
+            names = ["Hello"]
         }
+    }
         
     }
   
@@ -115,4 +128,4 @@ class NamesTableViewController: UITableViewController {
     */
 
 
-}
+
