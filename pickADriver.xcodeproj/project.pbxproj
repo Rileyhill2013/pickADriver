@@ -15,6 +15,7 @@
 		E0A04519237B27650026D0AC /* pickADriverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A04518237B27650026D0AC /* pickADriverTests.swift */; };
 		E0A04524237B27650026D0AC /* pickADriverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A04523237B27650026D0AC /* pickADriverUITests.swift */; };
 		E0A04532237B27910026D0AC /* NamesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A04531237B27910026D0AC /* NamesTableViewController.swift */; };
+		E0BD308A2385C5ED00981BC0 /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0BD30892385C5ED00981BC0 /* DisplayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		E0A04523237B27650026D0AC /* pickADriverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pickADriverUITests.swift; sourceTree = "<group>"; };
 		E0A04525237B27650026D0AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0A04531237B27910026D0AC /* NamesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamesTableViewController.swift; sourceTree = "<group>"; };
+		E0BD30892385C5ED00981BC0 /* DisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				E0A04503237B27600026D0AC /* AppDelegate.swift */,
 				E0A04531237B27910026D0AC /* NamesTableViewController.swift */,
+				E0BD30892385C5ED00981BC0 /* DisplayViewController.swift */,
 				E0A04507237B27600026D0AC /* Main.storyboard */,
 				BA3ECEDB237C83990067DB4E /* PeriodViewController.swift */,
 				E0A0450A237B27650026D0AC /* Assets.xcassets */,
@@ -262,6 +265,7 @@
 				BA3ECEDC237C83990067DB4E /* PeriodViewController.swift in Sources */,
 				E0A04532237B27910026D0AC /* NamesTableViewController.swift in Sources */,
 				E0A04504237B27600026D0AC /* AppDelegate.swift in Sources */,
+				E0BD308A2385C5ED00981BC0 /* DisplayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

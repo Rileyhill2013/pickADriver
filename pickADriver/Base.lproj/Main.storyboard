@@ -8,6 +8,28 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Display View Controller-->
+        <scene sceneID="8Pp-2J-8Xi">
+            <objects>
+                <viewController id="ydV-GS-nyu" customClass="DisplayViewController" customModule="pickADriver" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8QO-ZG-RmT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="JBo-E1-Kua"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="cff-kr-Is7">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="7rQ-DZ-sQV">
+                            <connections>
+                                <segue destination="NYX-HH-Gsq" kind="show" identifier="DisplayToNamesSegue" id="lWK-Kl-sra"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IbX-JQ-Ed6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1762" y="122"/>
+        </scene>
         <!--Names Table View Controller-->
         <scene sceneID="aCS-uI-cQg">
             <objects>
@@ -41,7 +63,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="734-ZN-N41" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2083" y="121"/>
+            <point key="canvasLocation" x="2468" y="122"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KX6-rA-cHT">
@@ -174,7 +196,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Select a period" id="yLq-h7-7U9"/>
                     <connections>
-                        <segue destination="NYX-HH-Gsq" kind="show" identifier="PeriodToNameSegue" id="2eP-Cr-BRU"/>
+                        <segue destination="ydV-GS-nyu" kind="show" identifier="PeriodToDisplaySegue" id="oqx-mX-De5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HXx-Ue-gaZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
