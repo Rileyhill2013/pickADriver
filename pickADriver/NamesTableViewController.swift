@@ -94,21 +94,21 @@ class NamesTableViewController: UITableViewController {
     func loadTestNames() {
         switch period {
         case "First Period":
-            names = ["Jaylin", "Mason", "Kelvin"]
+            names = ["Jaylin", "Theo", "Kelvin"]
         case "Second Period":
-            names = ["Jaylin", "David", "Gerardo"]
+            names = ["Kylie", "David", "Gerardo"]
         case "Third Period":
             names = ["Fitzer", "Mason", "Giorno"]
         case "Fourth Period":
-            names = ["Craft", "Fitzer", "Trey"]
+            names = ["Craft", "Kass", "Trey"]
         case "Fifth Period":
             names = ["William", "Mason", "Joseph"]
         case "Six Period":
-            names = ["Jaylin", "Jay", "Wood"]
+            names = ["Nathan", "Jay", "Wood"]
         case "Seventh Period":
-            names = ["Fitzer", "Derek", "Johnson"]
+            names = ["Evolac", "Derek", "Johnson"]
         case "Eight Period":
-            names = ["Franz", "Abigail", "Kelvin"]
+            names = ["Franz", "Abigail", "Kent"]
         default:
             names = ["Hello"]
         }
